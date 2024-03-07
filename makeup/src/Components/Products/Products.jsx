@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Container, StyledImage, Ul, Li} from './styles'
 
 export default function Products() {
     const [products, setProducts] = useState([]);
@@ -18,22 +19,22 @@ export default function Products() {
       }, []); 
 
     return (
-        <div>
+        <Container>
             <h1>Lista de Itens</h1>
-            <ul>
+            <Ul>
                 {products.map((item, index) => (
-                    <li key={index}>
-                        <img src={item.image_link} alt={item.name} />
+                    <Li key={index}>
+                        <StyledImage src={item.image_link} alt={item.name} />
                         <div>
                             <h3>{item.name}</h3>
                             <p>Marca: {item.brand}</p>
                             <p>Preço: {item.price} {item.currency}</p>
                             <p>Descrição: {item.description}</p>
                         </div>
-                    </li>
+                    </Li>
                 ))}
-            </ul>
-        </div>
+            </Ul>
+        </Container>
     );
 
 }
