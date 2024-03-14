@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Container, StyledImage, Ul, Li} from './styles'
 
+
 export default function Products() {
     const [products, setProducts] = useState([]);
 
@@ -18,6 +19,7 @@ export default function Products() {
         fetchData();
       }, []); 
 
+        
     return (
         <Container>
             <h1>Lista de Itens</h1>

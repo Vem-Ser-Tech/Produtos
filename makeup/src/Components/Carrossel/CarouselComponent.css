@@ -1,0 +1,28 @@
+.carousel-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+  width: 80%; 
+  margin: auto; 
+}
+
+.custom-carousel {
+  max-width: 100%; 
+  margin-top: 20px; 
+  background-color: #ffdee2c6; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgb(233, 173, 173); 
+  padding: 15px; 
+  overflow: hidden; 
+}
+
+.custom-carousel .carousel-item {
+  text-align: center; 
+  background-color: #faeaec; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+  margin-right: 10px; 
+}
