@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Container, StyledImage, Ul, Li} from './styles'
 import SearchProducts from './Search/SearchProducts';
+import CardProdutos from '../Card/Card';
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -18,6 +19,7 @@ export default function Products() {
   useEffect(() => {
     fetchData();
   }, []); 
+  
 
   const handleSearch = (searchResults) => {
     setProducts(searchResults); // Atualiza o estado dos produtos com os resultados da pesquisa
@@ -32,19 +34,12 @@ export default function Products() {
       <h1>Lista de Itens</h1>
 
       <Ul>
-        {products.map((item, index) => (
+        {products.slice(0, 10).map((item, index) => (
           <Li key={index}>
-            <StyledImage src={item.image_link} alt={item.name} />
-            <div>
-              <h3>{item.name}</h3>
-              <p>Marca: {item.brand}</p>
-              <p>Preço: {item.price} {item.currency}</p>
-              <p>Descrição: {item.description}</p>
-            </div>
+            <CardProdutos product={item}></CardProdutos>
           </Li>
         ))}
       </Ul>
     </Container>
   );
-
 }
