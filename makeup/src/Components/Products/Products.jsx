@@ -3,6 +3,7 @@ import {Container, StyledImage, Ul, Li} from './styles'
 import SearchProducts from './Search/SearchProducts';
 import CardProdutos from '../Card/Card';
 
+
 export default function Products() {
   const [products, setProducts] = useState([]);
 
@@ -42,4 +43,6 @@ export default function Products() {
       </Ul>
     </Container>
   );
+
 }
+
