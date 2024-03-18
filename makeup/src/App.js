@@ -1,4 +1,5 @@
 import './App.css';
+import Products from './Components/Products/Products';
 import React from 'react';
 import CarouselComponent from './Components/Carrossel/carrossel';
 
