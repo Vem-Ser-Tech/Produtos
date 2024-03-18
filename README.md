@@ -14,6 +14,6 @@ Pontos a serem avaliados:
 
 Equipe:
 - Thaysa Rafaele
-- Karisma Souza
+- Karisma Sousa
 - Kamila Rocha
 - Gabrielle Pires (Commit: rafae1f)
