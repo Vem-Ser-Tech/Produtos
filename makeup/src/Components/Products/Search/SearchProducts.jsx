@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Container, Form, Input, Button } from './styles'; 
+import ProductsContext from '../../../Contexts/ProductsContext ';
 
 const SearchProducts = ({ onSearch }) => {
+  const { updateProducts } = useContext(ProductsContext);
   const [searchTerm, setSearchTerm] = useState('');
+
+
+  
+  useEffect(() => {
+    console.log('searchTerm: ',searchTerm);
+  }, [ searchTerm]);
+
 
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?${searchTerm}`);
+      const response = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${searchTerm}`);
       const data = await response.json();
-      onSearch(data);
+      updateProducts(data);
     } catch (error) {
       console.error('Erro ao buscar dados da API: ', error);
     }
