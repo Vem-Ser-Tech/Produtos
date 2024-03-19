@@ -1,5 +1,9 @@
 # Produtos
 
+Deploy feito com Ve4rcel: https://produtos-s9a2.vercel.app/
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
 Requisitos:
 - Deverá renderizar uma lista de produtos retornados de uma API (scopo aberto)
 - Ao clicar em um item, deverá abrir um modal que contenha a imagem do produto, nome, preço e uma seta para a direira e outra para a esquerda
