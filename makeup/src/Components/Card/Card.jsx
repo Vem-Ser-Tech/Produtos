@@ -45,6 +45,11 @@ export default function CardProdutos({ product }) {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <p>
+              {product.description}
+            </p>
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            <p>
               Preço: {product.price_sign}
               {product.price}
               {product.currency}

@@ -19,10 +19,44 @@
 }
 
 .custom-carousel .carousel-item {
-  text-align: center; 
-  background-color: #faeaec; 
+  background-color: #c67e7991; 
   padding: 20px; 
   border-radius: 10px; 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
   margin-right: 10px; 
+  text-align: -webkit-center;
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  backface-visibility: hidden;
+  transition: transform .6s ease-in-out;
+}
+
+.modal-body {
+  background-color: #c67e7991; 
+  padding: 20px;   
+  border-radius: 10px;
+  text-align: -webkit-center;
+}
+
+.modal-content {
+  max-width: 100%;
+  margin-top: 20px;
+  background-color: #ffdee2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(233, 173, 173);
+  padding: 15px;
+  overflow: hidden;
+}
+
+.btn-secondary{
+  background-color: #c67e79;
+  border: 1px solid #c67e79;
+
+  &:hover {
+    background-color: #ea9070;
+    border: 1px solid #ea9070;
+  }
 }

@@ -1,35 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext  } from 'react';
 import {Container, StyledImage, Ul, Li} from './styles'
 import SearchProducts from './Search/SearchProducts';
 import CardProdutos from '../Card/Card';
+import ProductsContext from '../../Contexts/ProductsContext ';
 
 
-export default function Products() {
-  const [products, setProducts] = useState([]);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json');
-      const data = await response.json();
-      setProducts(data);
-    } catch (error) {
-      console.error('Erro ao buscar dados da API:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []); 
+export default function Products({onProductClick}) {
+  const { products } = useContext(ProductsContext);
   
-
-  const handleSearch = (searchResults) => {
-    setProducts(searchResults); // Atualiza o estado dos produtos com os resultados da pesquisa
-  };
 
   return (
     <Container>
       <div>
-        <SearchProducts onSearch={handleSearch}/>
+        <SearchProducts />
       </div>
 
       <h1>Lista de Itens</h1>
@@ -37,7 +20,7 @@ export default function Products() {
       <Ul>
         {products.slice(0, 10).map((item, index) => (
           <Li key={index}>
-            <CardProdutos product={item}></CardProdutos>
+            <CardProdutos product={item} onClick={() => onProductClick(item)} />
           </Li>
         ))}
       </Ul>
@@ -45,4 +28,3 @@ export default function Products() {
   );
 
 }
-
