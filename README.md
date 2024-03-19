@@ -1,6 +1,6 @@
 # Produtos
 
-Deploy feito com Ve4rcel: https://produtos-s9a2.vercel.app/
+Deploy feito com Vercel: https://produtos-s9a2.vercel.app/
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
